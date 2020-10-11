@@ -7,6 +7,8 @@ import reduxThunk from "redux-thunk";
 
 import App from "./components/App";
 import reducers from "./reducers";
+import axios from 'axios'
+window.axios = axios
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 ReactDOM.render(
@@ -16,5 +18,5 @@ ReactDOM.render(
   document.querySelector("#root")
 );
 
-console.log("STRIPE KEY IS", process.env.REACT_APP_STRIPE_KEY);
-console.log("STRIPE KEY IS", process.env.NODE_ENV);
+// console.log("STRIPE KEY IS", process.env.REACT_APP_STRIPE_KEY);
+// console.log("STRIPE KEY IS", process.env.NODE_ENV);
